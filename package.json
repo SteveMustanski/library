@@ -1,0 +1,19 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SteveMustanski/library.git"
+  },
+  "author": "Steve Mustanski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SteveMustanski/library/issues"
+  },
+  "homepage": "https://github.com/SteveMustanski/library#readme"
+}
