@@ -23,7 +23,13 @@ app.use(
 );
 
 app.get('/', (req, res) => {
-  res.render('index', { list: ['a', 'b', 'c'], title: 'Library' });
+  res.render('index', {
+    nav: [
+      { link: '/books', title: 'Books' },
+      { link: '/authors', title: 'Authors' },
+    ],
+    title: 'Library',
+  });
 });
 
 // configure views and templating engine
