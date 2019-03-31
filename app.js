@@ -23,7 +23,7 @@ app.use(
 );
 
 app.get('/', (req, res) => {
-  res.render('index', { list: ['a', 'b', 'c'], title: 'My Library' });
+  res.render('index', { list: ['a', 'b', 'c'], title: 'Library' });
 });
 
 // configure views and templating engine
