@@ -23,12 +23,12 @@ app.use(
 );
 
 app.get('/', (req, res) => {
-  res.render('index', { list: ['a', 'b', 'c'] });
+  res.render('index', { list: ['a', 'b', 'c'], title: 'My Library' });
 });
 
 // configure views and templating engine
 app.set('views', './src/views');
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 
 app.listen(port, () => {
   debug(chalk.green(`Server is listening on port ${port}...`));
