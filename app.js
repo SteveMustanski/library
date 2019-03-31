@@ -23,8 +23,12 @@ app.use(
 );
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views/index.html'));
+  res.render('index');
 });
+
+// configure views and templating engine
+app.set('views', './src/views');
+app.set('view engine', 'pug');
 
 app.listen(port, () => {
   debug(chalk.green(`Server is listening on port ${port}...`));
