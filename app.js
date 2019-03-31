@@ -8,6 +8,27 @@ const app = express();
 const port = process.env.PORT || 3000;
 const bookRouter = express.Router();
 
+const books = [
+  {
+    title: "Hitchiker's Guide to the Galaxy",
+    genre: 'Science Fiction',
+    author: 'Douglas Adams',
+    read: false,
+  },
+  {
+    title: 'The Lord of the Rings',
+    genre: 'Fantasy',
+    author: 'JRR Tolkien',
+    read: false,
+  },
+  {
+    title: 'Atlas Shrugged',
+    genre: 'Fiction',
+    author: 'Ayn Rand',
+    read: false,
+  },
+];
+
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public/')));
 app.use(
@@ -24,7 +45,14 @@ app.use(
 );
 
 bookRouter.route('/').get((reg, res) => {
-  res.send('hello books');
+  res.render('books', {
+    nav: [
+      { link: '/books', title: 'Books' },
+      { link: '/authors', title: 'Authors' },
+    ],
+    title: 'Library',
+    books,
+  });
 });
 bookRouter.route('/single').get((reg, res) => {
   res.send('hello single book');
