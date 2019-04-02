@@ -13,6 +13,7 @@ const nav = [
 ];
 
 const bookRouter = require('./src/routes/bookRoutes')(nav);
+const adminRouter = require('./src/routes/adminRoutes')(nav);
 
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public/')));
@@ -30,6 +31,8 @@ app.use(
 );
 
 app.use('/books', bookRouter);
+app.use('/admin', adminRouter);
+
 app.get('/', (req, res) => {
   res.render('index', {
     nav,
