@@ -25,7 +25,8 @@ const books = [
   },
 ];
 
-function router(nav) {
+// function router(nav) {
+function router() {
   adminRouter.route('/').get((req, res) => {
     const url = 'mongoDB://localhost:27017';
     const dbName = 'libraryApp';
