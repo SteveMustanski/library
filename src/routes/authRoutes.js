@@ -41,7 +41,12 @@ function router(nav) {
         title: 'Sign In',
       });
     })
-    .post(passport.authenticate);
+    .post(
+      passport.authenticate('local', {
+        successRedirect: '/auth/profile',
+        failureRedirect: '/',
+      }),
+    );
   authRouter.route('/profile').get((req, res) => {
     res.json(req.user);
   });
