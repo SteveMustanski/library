@@ -1,4 +1,5 @@
 const passport = require('passport');
+require('./strategies/local.strategy')();
 
 module.exports = function passportConfig(app) {
   app.use(passport.initialize());
@@ -13,6 +14,4 @@ module.exports = function passportConfig(app) {
   passport.deserializeUser((user, done) => {
     done(null, user);
   });
-  // eslint-disable-next-line global-require
-  require('./strategies/local.strategy');
 };
