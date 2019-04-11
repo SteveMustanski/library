@@ -4,17 +4,14 @@ const debug = require('debug')('app');
 const morgan = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
-const passport = require('passport');
+// const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-const nav = [
-  { link: '/books', title: 'Books' },
-  { link: '/authors', title: 'Authors' },
-];
+const nav = [{ link: '/books', title: 'Books' }];
 
 const bookRouter = require('./src/routes/bookRoutes')(nav);
 const adminRouter = require('./src/routes/adminRoutes')(nav);
