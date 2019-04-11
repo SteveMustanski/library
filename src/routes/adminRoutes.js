@@ -16,12 +16,14 @@ const books = [
     title: 'The Lord of the Rings',
     genre: 'Fantasy',
     author: 'JRR Tolkien',
+    bookId: 33,
     read: false,
   },
   {
     title: 'Atlas Shrugged',
     genre: 'Fiction',
     author: 'Ayn Rand',
+    bookId: 662,
     read: false,
   },
 ];

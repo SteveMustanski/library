@@ -1,6 +1,7 @@
 const axios = require('axios');
 const xml2js = require('xml2js');
 const debug = require('debug')('app:goodreadsService');
+// eslint-disable-next-line no-unused-vars
 const dovEnv = require('dotenv').config();
 const keys = require('../../keys');
 
