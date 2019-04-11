@@ -27,7 +27,7 @@ Dotenv will set up your environment. You will need to include
 const dovEnv = require('dotenv').config();
 ```
 
-to make this happen. This is set up already in the good reads servers.
+to make this happen. This is set up already in the good reads service.
 
 The keys.js file which is required in the goodreadsService.js file will make the id available to the code.
 
