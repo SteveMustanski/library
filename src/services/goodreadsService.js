@@ -1,15 +1,19 @@
 const axios = require('axios');
 const xml2js = require('xml2js');
 const debug = require('debug')('app:goodreadsService');
+const dovEnv = require('dotenv').config();
+const keys = require('../../keys');
 
 const parser = xml2js.Parser({ explicitArray: false });
 
 function goodreadsService() {
-  function getBookById() {
+  function getBookById(id) {
     return new Promise((resolve, reject) => {
       axios
         .get(
-          'https://www.goodreads.com/book/show/386162.xml?key=Yn0cojbDqUH25UoCMeg',
+          `https://www.goodreads.com/book/show/${id}.xml?key=${
+            keys.goodreads.id
+          }`,
         )
         // eslint-disable-next-line arrow-parens
         .then(response => {

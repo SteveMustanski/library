@@ -9,6 +9,7 @@ const books = [
     title: "Hitchiker's Guide to the Galaxy",
     genre: 'Science Fiction',
     author: 'Douglas Adams',
+    bookId: 386162,
     read: false,
   },
   {
